@@ -2,16 +2,16 @@ import React from "react";
 import { useContextProvider } from "../store/Context";
 
 function Aside() {
-  const { dispatch } = useContextProvider();
+  const { state, dispatch } = useContextProvider();
 
   return (
     <>
       <div className="radio">
-        <input type="radio" name="show" value="total" checked onChange={() => dispatch({ type: "PORCENTUAL" })}/>
+        <input type="radio" name="show" value="total" checked ={!state.porcentual} onChange={() => dispatch({ type: "PORCENTUAL" })}/>
         <label>Total</label>
       </div>
       <div className="radio">
-        <input type="radio" name="show" value="porcentual" onChange={() => dispatch({ type: "PORCENTUAL" })}/>
+        <input type="radio" name="show" value="porcentual" checked ={state.porcentual} onChange={() => dispatch({ type: "PORCENTUAL" })}/>
         <label>Porcentual (%)</label>
       </div>
       <div className="checkbox">
