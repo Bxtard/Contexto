@@ -1,13 +1,14 @@
-import React from 'react'
-import { useContextProvider } from "../store/Context"
+import React from "react";
+import { useContextProvider } from "../store/Context";
 
 function Total() {
-
-  const {state} = useContextProvider();
+  const { state } = useContextProvider();
 
   return (
-    <div><h3>Total votos {state.total}</h3></div>
-  )
+    <section className="form-control">
+      <h3>Total votos {state.total}</h3>
+    </section>
+  );
 }
 
-export default Total
+export default Total;

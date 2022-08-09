@@ -87,7 +87,7 @@ export const useContextProvider = () => {
   const tempContext = useContext(context);
 
   if (context === undefined) {
-    throw new Error("useAppContext must be used within a AppProvider");
+    throw new Error("useContextProvider must be used within a ContextProvider");
   }
 
   return tempContext;

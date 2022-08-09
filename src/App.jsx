@@ -9,23 +9,21 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="app">
-      <div className="candidates">
-        <Candidate1 className="candidate" />
-        <Candidate2 className="candidate" />
-        <Candidate3 className="candidate" />
-        <Candidate4 className="candidate" />
+    <main className="container-xl form-control">
+      <article className="input-group-text row row-cols-4">
+        <Candidate1 />
+        <Candidate2 />
+        <Candidate3 />
+        <Candidate4 />
+      </article>
+      <div className="input-group-text">
+        <Aside />
+        <article className="form-control">
+          <Total />
+          <Votes />
+        </article>
       </div>
-      <div className="info">
-        <div className="aside">
-          <Aside className="aside-items"/>
-        </div>
-        <div>
-          <Total className="total" />
-          <Votes className="votes" />
-        </div>
-      </div>
-    </div>
+    </main>
   );
 }
 

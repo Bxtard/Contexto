@@ -4,63 +4,63 @@ import { useContextProvider } from "../store/Context";
 function Votes() {
   const { state } = useContextProvider();
   return (
-    <>
+    <section class="">
       {state.porcentual ? (
         <>
           {state.showCandidate1 ? (
-            <h3>
+            <label className="form-control">
               candidate 1 <br />
               {((state.candidate1 * 100) / state.total).toFixed(2)}%
-            </h3>
+            </label>
           ) : null}
           {state.showCandidate2 ? (
-            <h3>
+            <label className="form-control">
               candidate 2 <br />
               {((state.candidate2 * 100) / state.total).toFixed(2)}%
-            </h3>
+            </label>
           ) : null}
           {state.showCandidate3 ? (
-            <h3>
+            <label className="form-control">
               candidate 3 <br />
               {((state.candidate3 * 100) / state.total).toFixed(2)}%
-            </h3>
+            </label>
           ) : null}
           {state.showCandidate4 ? (
-            <h3>
+            <label className="form-control">
               candidate 4 <br />
               {((state.candidate4 * 100) / state.total).toFixed(2)}%
-            </h3>
+            </label>
           ) : null}
         </>
       ) : (
         <>
           {state.showCandidate1 ? (
-            <h3>
+            <label className="form-control">
               candidate 1 <br />
               {state.candidate1}
-            </h3>
+            </label>
           ) : null}
           {state.showCandidate2 ? (
-            <h3>
+            <label className="form-control">
               candidate 2 <br />
               {state.candidate2}
-            </h3>
+            </label>
           ) : null}
           {state.showCandidate3 ? (
-            <h3>
+            <label className="form-control">
               candidate 3 <br />
               {state.candidate3}
-            </h3>
+            </label>
           ) : null}
           {state.showCandidate4 ? (
-            <h3>
+            <label className="form-control">
               candidate 4 <br />
               {state.candidate4}
-            </h3>
+            </label>
           ) : null}
         </>
       )}
-    </>
+    </section>
   );
 }
 

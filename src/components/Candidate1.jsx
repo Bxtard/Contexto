@@ -5,15 +5,16 @@ function Candidate1() {
   const { dispatch } = useContextProvider();
 
   return (
-    <div className="candidate">
-      <h3>candidato 1</h3>
+    <section className="col">
+      <h3>candidate 1</h3>
       <button
         type="button"
+        class="btn btn-primary"
         onClick={() => dispatch({ type: "VOTE_CANDIDATE1" })}
       >
         vote
       </button>
-    </div>
+    </section>
   );
 }
 
